@@ -1,9 +1,16 @@
 package bester;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Bester {
 
+
+    public static Cookie getBestCookie(List<Cookie> cookies) {
+
+        Cookie result = cookies.stream().max(Comparator.comparing(cookie -> cookie.getNumberOfChocolateChips()));
+    }
 
     public Rectangle compare(List<Rectangle> recList) {
 
