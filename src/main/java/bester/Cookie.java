@@ -1,10 +1,6 @@
 package bester;
 
-public class Cookie {
-
-    public int getNumberOfChocolateChips() {
-        return numberOfChocolateChips;
-    }
+public class Cookie implements Bestful{
 
     private int numberOfChocolateChips;
 
@@ -12,4 +8,13 @@ public class Cookie {
         this.numberOfChocolateChips = numberOfChocolateChips;
     }
 
+    @Override
+    public int hashCode() {
+        return numberOfChocolateChips;
+    }
+
+    @Override
+    public boolean compareTo(Bestful bestful) {
+        return numberOfChocolateChips>bestful.hashCode();
+    }
 }

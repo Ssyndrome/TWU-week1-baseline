@@ -2,7 +2,7 @@ package bester;
 
 import java.util.Objects;
 
-public class Rectangle {
+public class Rectangle implements Bestful{
     private double length;
     private double breadth;
 
@@ -26,6 +26,12 @@ public class Rectangle {
 
     @Override
     public int hashCode() {
-        return Objects.hash(length, breadth);
+        return Objects.hash(area());
+    }
+
+
+    @Override
+    public boolean compareTo(Bestful bestful) {
+        return area()>bestful.hashCode();
     }
 }

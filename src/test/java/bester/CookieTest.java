@@ -8,12 +8,14 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CookieTest {
+    Bester bester = new Bester();
+
     @Test
-    void shouldReturnBestCookie() {
-        List<Cookie> cookies = Arrays.asList(new Cookie(1),
+    public void shouldReturnBestCookie() {
+        List<Bestful> cookies = Arrays.asList(new Cookie(1),
                                             new Cookie(2),
                                             new Cookie(3),
                                             new Cookie(4));
-        assertEquals(Bester.getBestCookie(cookies),new Cookie(4));
+        assertEquals(bester.getBest(cookies),new Cookie(4));
     }
 }

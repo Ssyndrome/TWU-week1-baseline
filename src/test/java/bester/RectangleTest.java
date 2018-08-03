@@ -20,7 +20,7 @@ public class RectangleTest {
 
     @Test
     public void shouldReturnBestRectangle() {
-        List<Rectangle> recList = Arrays.asList(new Rectangle(1,2),new Rectangle(1,3),new Rectangle(1,4),new Rectangle(1,5));
-        assertEquals(bester.compare(recList), new Rectangle(1,5));
+        List<Bestful> recList = Arrays.asList(new Rectangle(1,2),new Rectangle(1,3),new Rectangle(1,4),new Rectangle(1,5));
+        assertEquals(bester.getBest(recList), new Rectangle(1,5));
     }
 }
