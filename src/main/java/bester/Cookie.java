@@ -14,7 +14,12 @@ public class Cookie implements Bestful{
     }
 
     @Override
+    public boolean equals(Object obj) {
+        return this.numberOfChocolateChips == ((Cookie)obj).numberOfChocolateChips;
+    }
+
+    @Override
     public boolean compareTo(Bestful bestful) {
-        return numberOfChocolateChips>bestful.hashCode();
+        return this.numberOfChocolateChips >= bestful.hashCode();
     }
 }
